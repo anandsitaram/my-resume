@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Anand B S — QA Automation Resume</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#161e2b;
+    --paper:#fbfaf7;
+    --panel:#eef1ec;
+    --accent:#2f6f52;
+    --accent-soft:#e4efe7;
+    --line:#dcded9;
+    --muted:#5c6570;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:15px;
+    line-height:1.55;
+  }
+  .page{
+    max-width:840px;
+    margin:0 auto;
+    padding:0 0 60px;
+  }
+  header.hero{
+    background:var(--ink);
+    color:var(--paper);
+    padding:46px 48px 34px;
+    position:relative;
+    overflow:hidden;
+  }
+  header.hero::after{
+    content:"";
+    position:absolute;
+    right:-60px; top:-60px;
+    width:220px; height:220px;
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:50%;
+  }
+  .status-line{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:.08em;
+    color:#9fd6b5;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:18px;
+  }
+  .status-dot{
+    width:8px;height:8px;border-radius:50%;
+    background:#3fbf78;
+    box-shadow:0 0 0 3px rgba(63,191,120,0.18);
+    display:inline-block;
+  }
+  h1.name{
+    font-family:'Newsreader', serif;
+    font-weight:700;
+    font-size:44px;
+    margin:0 0 6px;
+    letter-spacing:-0.01em;
+  }
+  .role-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13.5px;
+    color:#c9cfd6;
+    margin-bottom:22px;
+  }
+  .contact-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    font-size:13px;
+    font-family:'IBM Plex Mono', monospace;
+  }
+  .contact-row a{ color:#dfe6e1; text-decoration:none; border-bottom:1px dotted rgba(255,255,255,0.35); }
+  .contact-row a:hover{ color:#9fd6b5; border-color:#9fd6b5; }
+
+  main{ padding:0 48px; }
+
+  section{ margin-top:38px; }
+
+  .sec-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:.06em;
+    color:var(--accent);
+    text-transform:uppercase;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:16px;
+  }
+  .sec-label::before{ content:"//"; color:#b7c9bd; }
+  .sec-label::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+
+  .summary-list{ list-style:none; margin:0; padding:0; }
+  .summary-list li{
+    position:relative;
+    padding-left:26px;
+    margin-bottom:12px;
+  }
+  .summary-list li::before{
+    content:"✓";
+    position:absolute; left:0; top:1px;
+    color:var(--accent);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    font-weight:600;
+  }
+
+  .grid-two{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px 40px;
+  }
+
+  .exp-block{ display:flex; gap:26px; margin-bottom:8px; }
+  .timeline-rail{
+    position:relative;
+    width:14px;
+    flex:0 0 14px;
+  }
+  .timeline-rail .node{
+    width:10px;height:10px;border-radius:50%;
+    background:var(--accent);
+    margin-top:6px;
+  }
+  .timeline-rail .rail{
+    position:absolute;
+    left:4.5px; top:18px; bottom:-38px;
+    width:1px;
+    background:var(--line);
+  }
+  .exp-block:last-child .timeline-rail .rail{ display:none; }
+
+  .exp-card{ flex:1; padding-bottom:30px; }
+  .exp-title-row{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    gap:0 10px;
+    margin-bottom:2px;
+  }
+  .exp-role{ font-family:'Newsreader', serif; font-weight:600; font-size:19px; }
+  .exp-org{ color:var(--muted); font-size:14.5px; }
+  .exp-dates{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--accent);
+    background:var(--accent-soft);
+    padding:2px 8px;
+    border-radius:3px;
+    margin-left:auto;
+    white-space:nowrap;
+  }
+  .exp-desc{ color:var(--muted); font-size:13.8px; margin:6px 0 10px; font-style:italic; }
+  .exp-bullets{ list-style:none; margin:0; padding:0; }
+  .exp-bullets li{
+    position:relative;
+    padding-left:20px;
+    margin-bottom:7px;
+    font-size:14.3px;
+  }
+  .exp-bullets li::before{
+    content:"›";
+    position:absolute; left:2px; top:0;
+    color:var(--accent);
+    font-weight:600;
+  }
+
+  .tags-row{ display:flex; flex-wrap:wrap; gap:8px; }
+  .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    color:var(--ink);
+    padding:4px 10px;
+    border-radius:4px;
+  }
+
+  .skill-cat{ margin-bottom:14px; }
+  .skill-cat-name{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--muted);
+    margin-bottom:6px;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+  }
+
+  .edu-row{
+    display:flex; justify-content:space-between; gap:16px;
+    padding:14px 0;
+    border-top:1px solid var(--line);
+  }
+  .edu-degree{ font-weight:600; }
+  .edu-meta{ color:var(--muted); font-size:13.5px; }
+  .edu-year{
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--accent);
+    font-size:13px;
+    white-space:nowrap;
+  }
+
+  footer{
+    margin-top:44px;
+    padding-top:18px;
+    border-top:1px solid var(--line);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--muted);
+    text-align:center;
+  }
+
+  @media (max-width:640px){
+    header.hero, main{ padding-left:22px; padding-right:22px; }
+    .grid-two{ grid-template-columns:1fr; }
+    h1.name{ font-size:32px; }
+    .exp-dates{ margin-left:0; }
+  }
+
+  @media print{
+    body{ background:#fff; }
+    header.hero{ background:#182233 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .exp-dates, .tag{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="hero">
+    <div class="status-line"><span class="status-dot"></span>BUILD STATUS: 11+ YRS · ALL SUITES PASSING</div>
+    <h1 class="name">Anand B S</h1>
+    <div class="role-tag">Quality Engineer · Test Architect · Automation Framework Lead</div>
+    <div class="contact-row">
+      <a href="mailto:anandbs291@gmail.com">anandbs291@gmail.com</a>
+      <a href="https://anandsitaram.github.io/home/" target="_blank" rel="noopener">anandsitaram.github.io/home</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="summary">
+      <div class="sec-label">Professional Summary</div>
+      <ul class="summary-list">
+        <li><strong>11+ years</strong> of QA experience across Banking, Cloud, EdTech, Retail, and Telecom domains with deep expertise in test automation, quality engineering, and leadership.</li>
+        <li><strong>Framework Engineering:</strong> Designed scalable automation frameworks using Playwright, Selenium, Appium, Rest Assured, and BDD (Cucumber/Serenity) that reduced regression execution time by up to 60%.</li>
+        <li><strong>Modern Tech Stack:</strong> Skilled in Java, TypeScript/JavaScript, Python, and Golang, with hands-on experience in Kafka automation, Service Virtualization (Mountebank, DevTest), and CI/CD pipelines using Jenkins, GitHub Actions, and GitLab.</li>
+        <li><strong>Leadership &amp; Strategy:</strong> Led cross-functional QA teams (up to 13 members) across geographies, serving as Test Architect to define automation strategies, enforce best practices, and mentor engineers.</li>
+        <li><strong>Business Impact:</strong> Migrated enterprise frameworks (e.g., Serenity BDD → Playwright BDD) improving scalability, coverage, and release cycle efficiency.</li>
+        <li><strong>Innovation:</strong> Leveraged GitHub Copilot and Generative AI (Gemini) for automation acceleration, code reviews, and intelligent QA solutions.</li>
+        <li>Currently expanding expertise in <strong>AI/ML-driven</strong> test automation and next-gen QA practices.</li>
+      </ul>
+    </section>
+
+    <section id="stack">
+      <div class="sec-label">Technical / Domain Exposure</div>
+      <div class="grid-two">
+        <div>
+          <div class="skill-cat">
+            <div class="skill-cat-name">Languages</div>
+            <div class="tags-row">
+              <span class="tag">Java</span><span class="tag">TypeScript / JS</span><span class="tag">Python</span><span class="tag">Golang</span>
+            </div>
+          </div>
+          <div class="skill-cat">
+            <div class="skill-cat-name">Automation</div>
+            <div class="tags-row">
+              <span class="tag">Playwright</span><span class="tag">Selenium</span><span class="tag">Appium</span><span class="tag">Rest Assured</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="skill-cat">
+            <div class="skill-cat-name">CI/CD &amp; DevOps</div>
+            <div class="tags-row">
+              <span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">GitLab</span><span class="tag">Maven</span><span class="tag">Gradle</span><span class="tag">Docker</span>
+            </div>
+          </div>
+          <div class="skill-cat">
+            <div class="skill-cat-name">Service Virtualization &amp; Messaging</div>
+            <div class="tags-row">
+              <span class="tag">Mountebank</span><span class="tag">DevTest</span><span class="tag">IBM MQ</span><span class="tag">Kafka</span>
+            </div>
+          </div>
+          <div class="skill-cat">
+            <div class="skill-cat-name">AI / GenAI</div>
+            <div class="tags-row">
+              <span class="tag">GitHub Copilot</span><span class="tag">Gemini</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="sec-label">Professional Experience</div>
+
+      <div class="exp-block">
+        <div class="timeline-rail"><div class="node"></div><div class="rail"></div></div>
+        <div class="exp-card">
+          <div class="exp-title-row">
+            <span class="exp-role">Quality Engineer</span>
+            <span class="exp-org">— ANZ (Australian Bank)</span>
+            <span class="exp-dates">Jun 2025 – Present</span>
+          </div>
+          <div class="exp-desc">Product &amp; Pricing lifecycle management platform (Zafin) — validating APIs and integration with downstream systems.</div>
+          <ul class="exp-bullets">
+            <li>Built a Golang-based automation framework for API validation, accelerating test execution by 45%.</li>
+            <li>Automated critical Zafin API flows, ensuring zero defects in production releases.</li>
+            <li>Partnered with Product Owners to configure products in Zafin and validate via automation.</li>
+            <li>Used GitHub Copilot to rapidly create and refine scripts, improving development speed.</li>
+            <li>Integrated Gemini AI for code reviews, enhancing code quality and maintainability.</li>
+            <li>Configured GitHub Actions workflows for cross-environment execution, reducing manual deployment efforts by 30%.</li>
+            <li>Actively reviewed PRs, enforced coding standards, and mentored teammates.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-block">
+        <div class="timeline-rail"><div class="node"></div><div class="rail"></div></div>
+        <div class="exp-card">
+          <div class="exp-title-row">
+            <span class="exp-role">Test Lead</span>
+            <span class="exp-org">— Happiest Minds (American EdTech Client)</span>
+            <span class="exp-dates">Feb 2024 – Jun 2025</span>
+          </div>
+          <div class="exp-desc">Migrated e-commerce platform from Sifinity → Magento, across multiple shared-code applications.</div>
+          <ul class="exp-bullets">
+            <li>Led migration from Serenity BDD → Playwright BDD, improving automation coverage by 40% and pipeline stability.</li>
+            <li>Designed and implemented a Playwright + Cucumber BDD framework, boosting readability and maintainability.</li>
+            <li>Converted 700+ manual test cases into automation, cutting regression cycle time by 50%.</li>
+            <li>Applied shift-left testing, detecting defects 2 sprints earlier on average.</li>
+            <li>Led a 6-member distributed QA team, mentoring on Playwright and test design best practices.</li>
+            <li>Extensively used GitHub Copilot for automation creation/modification and GitHub Actions for multi-environment test execution.</li>
+            <li>Acted as Test Architect for multiple teams, setting testing strategy and standardizing frameworks.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-block">
+        <div class="timeline-rail"><div class="node"></div><div class="rail"></div></div>
+        <div class="exp-card">
+          <div class="exp-title-row">
+            <span class="exp-role">Lead II – Software Testing</span>
+            <span class="exp-org">— UST Global (American Retail Client)</span>
+            <span class="exp-dates">Sep 2023 – Feb 2024</span>
+          </div>
+          <div class="exp-desc">Testing and automating Manhattan Active WMS and integrated supply chain systems (~700 test cases).</div>
+          <ul class="exp-bullets">
+            <li>Designed a custom automation framework for REST APIs and Kafka flows.</li>
+            <li>Automated high-value test cases, reducing manual testing effort by 35%.</li>
+            <li>Mapped UI flows to backend APIs, enabling faster defect triage and RCA.</li>
+            <li>Collaborated with developers and architects to validate API dependencies and Kafka event processing.</li>
+            <li>Conducted PR reviews and ensured code alignment with best practices.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-block">
+        <div class="timeline-rail"><div class="node"></div><div class="rail"></div></div>
+        <div class="exp-card">
+          <div class="exp-title-row">
+            <span class="exp-role">Technical Test Lead</span>
+            <span class="exp-org">— Infosys (Australian Bank, COE QE Team)</span>
+            <span class="exp-dates">Apr 2022 – Sep 2023</span>
+          </div>
+          <div class="exp-desc">Center of Excellence for Automation &amp; Service Virtualization.</div>
+          <ul class="exp-bullets">
+            <li>Led a 13-member team specializing in automation frameworks and service virtualization.</li>
+            <li>Migrated service virtualization from DevTest → Mountebank, reducing license costs.</li>
+            <li>Built multiple automation frameworks for different modules, aligned with project needs.</li>
+            <li>Defined automation strategies, best practices, and standardized frameworks across teams.</li>
+            <li>Provided mentorship, technical guidance, and reviewed automation deliverables.</li>
+            <li>Coordinated cross-team dependencies, ensuring on-time and high-quality deliveries.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-block">
+        <div class="timeline-rail"><div class="node"></div><div class="rail"></div></div>
+        <div class="exp-card">
+          <div class="exp-title-row">
+            <span class="exp-role">Technical Test Lead</span>
+            <span class="exp-org">— Infosys (Australian Bank, Mobile Banking App)</span>
+            <span class="exp-dates">Aug 2021 – Apr 2022</span>
+          </div>
+          <div class="exp-desc">Functional, Smoke, Accessibility &amp; Regression testing of online mobile banking app.</div>
+          <ul class="exp-bullets">
+            <li>Developed a mobile automation framework (Appium + TestNG + Gradle) integrated with Jenkins and Applitools.</li>
+            <li>Automated accessibility tests (large text, screen readers) improving compliance with WCAG standards.</li>
+            <li>Automated REST/SOAP service validations, reducing regression execution effort by 40%.</li>
+            <li>Led offshore QA team, driving sprint deliverables and automation coverage.</li>
+            <li>Conducted CI/CD pipeline execution in Jenkins, integrated with Perfecto cloud for device coverage.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-block">
+        <div class="timeline-rail"><div class="node"></div><div class="rail"></div></div>
+        <div class="exp-card">
+          <div class="exp-title-row">
+            <span class="exp-role">Test Analyst</span>
+            <span class="exp-org">— Infosys (US Bank, Web &amp; API Services)</span>
+            <span class="exp-dates">Aug 2017 – Aug 2021</span>
+          </div>
+          <div class="exp-desc">End-to-end testing of web services and applications, including automation of regression suites.</div>
+          <ul class="exp-bullets">
+            <li>Built a hybrid automation framework (Selenium + Rest Assured + Cucumber).</li>
+            <li>Automated functional &amp; regression test suites for REST/SOAP services integrated with Jenkins.</li>
+            <li>Conducted E2E testing across web + middleware apps, ensuring seamless workflows.</li>
+            <li>Collaborated with dev teams to virtualize 3rd-party services, enabling continuous testing.</li>
+            <li>Reviewed automation scripts, suggested optimizations, and ensured framework scalability.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-block">
+        <div class="timeline-rail"><div class="node"></div><div class="rail"></div></div>
+        <div class="exp-card">
+          <div class="exp-title-row">
+            <span class="exp-role">Test Engineer</span>
+            <span class="exp-org">— Synchronoss Technologies (US Telecom, Cloud App)</span>
+            <span class="exp-dates">Oct 2015 – Aug 2017</span>
+          </div>
+          <div class="exp-desc">Cloud-based native mobile application for data backup/restore (Contacts, Media, Messages).</div>
+          <ul class="exp-bullets">
+            <li>Developed mobile automation framework (Java + Appium + TestNG) for Android/iOS.</li>
+            <li>Automated sanity &amp; regression test cases.</li>
+            <li>Conducted functional testing across multiple device versions, ensuring compatibility.</li>
+            <li>Managed onsite–offshore collaboration and tracked automation delivery in Bamboo CI.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-block">
+        <div class="timeline-rail"><div class="node"></div></div>
+        <div class="exp-card">
+          <div class="exp-title-row">
+            <span class="exp-role">Test Engineer</span>
+            <span class="exp-org">— Synchronoss Technologies (US Telecom, Web Portal)</span>
+            <span class="exp-dates">Feb 2014 – Sep 2015</span>
+          </div>
+          <div class="exp-desc">Customer web portal for service configuration and migration.</div>
+          <ul class="exp-bullets">
+            <li>Automated regression test cases with Selenium WebDriver (Java).</li>
+            <li>Performed functional, regression, integration, and E2E testing across browsers and mobile devices.</li>
+            <li>Coordinated with stakeholders on defect triage using JIRA, reducing defect leakage to production.</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="education">
+      <div class="sec-label">Academic Profile</div>
+      <div class="edu-row">
+        <div>
+          <div class="edu-degree">Bachelor of Engineering (B.E.), Electronics and Communication Engineering</div>
+          <div class="edu-meta">Ghousia College of Engineering, Ramanagara</div>
+        </div>
+        <div class="edu-year">2013</div>
+      </div>
+    </section>
+
+    <footer>Anand B S · anandbs291@gmail.com · anandsitaram.github.io/home</footer>
+
+  </main>
+</div>
+</body>
+</html>
